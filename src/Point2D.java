@@ -1,15 +1,15 @@
 public class Point2D {
     private float x = 0.0f, y = 0.0f;
-    private static int count = 0;
+    private static int counter = 0;
 
     public Point2D() {
-        increaseCount();
+        counter++;
     }
 
     public Point2D(float x, float y) {
         this.x = x;
         this.y = y;
-        increaseCount();
+        counter++;
     }
 
     public float getX() {
@@ -37,13 +37,9 @@ public class Point2D {
         return new float[]{x, y};
     }
 
-    private void increaseCount() {
-        count++;
-    }
-
     @Override
     public String toString() {
-        return "Point2D " + count + " ("
+        return "Point2D " + counter + " ("
                 + getXY()[0] + ", "
                 + getXY()[1] + ')';
     }

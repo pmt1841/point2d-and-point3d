@@ -1,15 +1,15 @@
 public class Point3D extends Point2D {
     private float z = 0.0f;
-    private static int count = 0;
+    private static int counter = 0;
 
     public Point3D() {
-        increaseCount();
+        counter++;
     }
 
     public Point3D(float x, float y, float z) {
         super(x, y);
         this.z = z;
-        increaseCount();
+        counter++;
     }
 
     public float getZ() {
@@ -29,13 +29,9 @@ public class Point3D extends Point2D {
         return new float[]{getX(), getY(), getZ()};
     }
 
-    private void increaseCount() {
-        count++;
-    }
-
     @Override
     public String toString() {
-        return "Point3D " + count + " ("
+        return "Point3D " + counter + " ("
                 + getXYZ()[0] + ", "
                 + getXYZ()[1] + ", "
                 + getXYZ()[2] + ')';
