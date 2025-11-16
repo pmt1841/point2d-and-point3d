@@ -22,7 +22,7 @@ public class Point3D extends Point2D {
 
     public void setXYZ(float x, float y, float z) {
         super.setXY(x, y);
-        this.z = z;
+        setZ(z);
     }
 
     public float[] getXYZ() {
